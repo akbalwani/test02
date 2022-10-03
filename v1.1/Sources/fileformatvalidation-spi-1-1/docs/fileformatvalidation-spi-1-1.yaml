@@ -1,0 +1,98 @@
+RouteStepFileFormationValidation:
+  description: A representation of a route step of type FileFormationValidation
+  allOf:
+    - required:
+        - autostart
+        - fileFilterExpression
+        - fileFilterExpressionType
+        - fileType
+        - quarantineFolder
+      type: object
+      properties:
+        autostart:
+          type: boolean
+          description: Step autostart.
+          default: false
+        type:
+          type: string
+          default: FileFormationValidation
+        usePrecedingStepFiles:
+          type: boolean
+          description: If true, the route execution will continue even if the step
+            execution fails.
+          default: false
+        fileFilterExpression:
+          maxLength: 64
+          minLength: 0
+          type: string
+          description: File name or file name expression. It is used with the file
+            filter expression property.
+        fileFilterExpressionType:
+          type: string
+          description: File filter expression type.
+          enum:
+            - GLOB
+            - REGEXP
+            - TEXT_FILES
+        actionOnStepFailure:
+          type: string
+          description: Action on step failure. If set to PROCEED, the route execution will continue even if the step execution fails
+          enum:
+          - FAIL
+          - PROCEED
+        fileType:
+          type: string
+          description: Specifies the type of the file against which it will be validated. The property value will be set as a file flow attribute.
+          enum:
+            - xml
+            - csv
+            - dat
+        quarantineFolder:
+          minLength: 0
+          type: string
+          description:
+            The folder where the invalid files should be moved.
+            The property value will be set as a file flow attribute.
+        separator:
+          type: string
+          description:
+            Separator for element separation in .csv files. This field is required for csv file type.
+            After expression evaluation the separator field only gets the first character from the evaluated value.
+        elementNumber:
+          type: string
+          description:
+            Number of expected elements in the .csv file.
+            Each record of the file must contain the specified number of elements.
+            If there is no provided value, each record of the file must have the same number of elements as the number of elements of the first record of the file.
+        skipHeader:
+          type: string
+          description:
+            Checkbox to enable/disable the option to skip header lines. When checked the option to specify "No. of Header Lines to be Skipped" will be enabled.
+        skipFooter:
+          type: string
+          description:
+            Checkbox to enable/disable the option to skip footer lines. When checked the option to specify "No. of Footer Lines to be Skipped" will be enabled.
+        headerCount:
+          type: string
+          description:
+            Based on the value, first n lines will be skipped for validation. Specify a value as a whole number or an expression that resolves to a whole number.
+        footerCount:
+          type: string
+          description:
+            Based on the value, last n lines will be skipped for validation. Specify a value as a whole number or an expression that resolves to a whole number.
+        fixedLength:
+          type: string
+          description:
+            Fixed length of the file records.
+            Each record of the .dat file must contain the specified number of symbols.
+            If there is no provided value, validation against this field will not be performed.
+        recordHeader:
+          type: string
+          description:
+            The specified value will be checked as a record head for each record.
+            If there is no provided value, validation against this field will not be performed.
+        forbiddenChars:
+          type: string
+          description:
+            Forbidden characters in the file. The specified symbols must not be present in the file. By default, the comma char ‘,’ is considered forbidden.
+            If no value is provided, the file will be scanned for comma ‘,’, otherwise – it will be scanned for ‘,’ along with the other specified symbols.

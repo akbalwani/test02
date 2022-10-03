@@ -1,0 +1,275 @@
+SrvMgmt|SM3.1|SLA03607|SLM03360|SOUTH|DAILY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03360|SOUTH|MONTHLY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03360|SOUTH|QUARTERLY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03360|SOUTH|YEARLY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03305|CENTRAL|DAILY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03305|CENTRAL|MONTHLY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03305|CENTRAL|QUARTERLY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM3.1|SLA03607|SLM03305|CENTRAL|YEARLY|2017-08-31|Percentage of Category 2 HAN Interface Commands received by DCC WAN 22 Hours|99.00|96.00|96|99
+SrvMgmt|SM4.1|SLA03608|SLM03359|SOUTH|DAILY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03359|SOUTH|MONTHLY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03359|SOUTH|QUARTERLY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03359|SOUTH|YEARLY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03308|CENTRAL|DAILY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03308|CENTRAL|MONTHLY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03308|CENTRAL|QUARTERLY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|SM4.1|SLA03608|SLM03308|CENTRAL|YEARLY|2017-08-31|Percentage of RTT 2 Test HAN Interface Commands delivered within 22 Hours|99.00|96.00|79200|82800
+SrvMgmt|KPI5|SLA03611|SLM03112|SOUTH|DAILY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03112|SOUTH|MONTHLY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03112|SOUTH|QUARTERLY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03112|SOUTH|YEARLY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03312|CENTRAL|DAILY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03312|CENTRAL|MONTHLY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03312|CENTRAL|QUARTERLY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI5|SLA03611|SLM03312|CENTRAL|YEARLY|2017-08-31|Percentage of RTT HAN Interface Command Message Loss|98.00|97.50|2|3
+SrvMgmt|KPI6.1|SLA03612|SLM03357|SOUTH|DAILY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|99
+SrvMgmt|KPI6.1|SLA03612|SLM03357|SOUTH|MONTHLY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|99
+SrvMgmt|KPI6.1|SLA03612|SLM03357|SOUTH|QUARTERLY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|99
+SrvMgmt|KPI6.1|SLA03612|SLM03357|SOUTH|YEARLY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|99
+SrvMgmt|KPI6.1|SLA03612|SLM03313|CENTRAL|DAILY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|100
+SrvMgmt|KPI6.1|SLA03612|SLM03313|CENTRAL|MONTHLY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|100
+SrvMgmt|KPI6.1|SLA03612|SLM03313|CENTRAL|QUARTERLY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|100
+SrvMgmt|KPI6.1|SLA03612|SLM03313|CENTRAL|YEARLY|2017-08-31|Percentage availability of Core Layer|99.98|98.25|98|100
+SrvMgmt|KPI7.1|SLA03613|SLM03354|SOUTH|DAILY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03354|SOUTH|MONTHLY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03354|SOUTH|QUARTERLY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03354|SOUTH|YEARLY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03316|CENTRAL|DAILY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03316|CENTRAL|MONTHLY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03316|CENTRAL|QUARTERLY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.1|SLA03613|SLM03316|CENTRAL|YEARLY|2017-08-31|Percentage of Incident Responses provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI11|SLA03614|SLM03350|SOUTH|DAILY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03350|SOUTH|MONTHLY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03350|SOUTH|QUARTERLY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03350|SOUTH|YEARLY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03322|CENTRAL|DAILY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03322|CENTRAL|MONTHLY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03322|CENTRAL|QUARTERLY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI11|SLA03614|SLM03322|CENTRAL|YEARLY|2017-08-31|Accuracy of Coverage Database provided to DCC Service Users|95.00|90.00|90|95
+SrvMgmt|KPI12.1|SLA03615|SLM03345|SOUTH|DAILY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03345|SOUTH|MONTHLY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03345|SOUTH|QUARTERLY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03345|SOUTH|YEARLY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03323|CENTRAL|DAILY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03323|CENTRAL|MONTHLY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03323|CENTRAL|QUARTERLY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|KPI12.1|SLA03615|SLM03323|CENTRAL|YEARLY|2017-08-31|% of Power Outage Event alerts delivered: 50 Communications Hubs or fewer|98.00|96.00|96|98
+SrvMgmt|SM1.2|SLA03619|SLM03338|SOUTH|DAILY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03338|SOUTH|MONTHLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03338|SOUTH|QUARTERLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03338|SOUTH|WEEKLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03338|SOUTH|YEARLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03302|CENTRAL|DAILY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03302|CENTRAL|MONTHLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03302|CENTRAL|QUARTERLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03302|CENTRAL|WEEKLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.2|SLA03619|SLM03302|CENTRAL|YEARLY|2017-08-31|First time SMWAN connectivity within 90 days|99.00|90.00|90|99
+SrvMgmt|SM1.3|SLA03620|SLM03335|SOUTH|DAILY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03335|SOUTH|MONTHLY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03335|SOUTH|QUARTERLY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03335|SOUTH|YEARLY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03303|CENTRAL|DAILY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03303|CENTRAL|MONTHLY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03303|CENTRAL|QUARTERLY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM1.3|SLA03620|SLM03303|CENTRAL|YEARLY|2017-11-28|SMWAN Connectivity Level|99.90|99.00|1|2
+SrvMgmt|SM4.3|SLA03621|SLM03110|SOUTH|DAILY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03110|SOUTH|MONTHLY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03110|SOUTH|QUARTERLY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03110|SOUTH|YEARLY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03310|CENTRAL|DAILY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03310|CENTRAL|MONTHLY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03310|CENTRAL|QUARTERLY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|SM4.3|SLA03621|SLM03310|CENTRAL|YEARLY|2017-08-31|Percentage of RTT 4 Test HAN Interface Commands delivered within 25 seconds|96.00|90.00|25|60
+SrvMgmt|KPI7.4|SLA03622|SLM03351|SOUTH|DAILY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03351|SOUTH|MONTHLY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03351|SOUTH|QUARTERLY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03351|SOUTH|YEARLY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03318|CENTRAL|DAILY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03318|CENTRAL|MONTHLY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03318|CENTRAL|QUARTERLY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI7.4|SLA03622|SLM03318|CENTRAL|YEARLY|2017-08-31|Percentage Incident Resolution of Severity 3, 4 and 5 Incidents within SLA|90.00|80.00|80|90
+SrvMgmt|KPI6.3|SLA03624|SLM03355|SOUTH|DAILY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|99
+SrvMgmt|KPI6.3|SLA03624|SLM03355|SOUTH|MONTHLY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|99
+SrvMgmt|KPI6.3|SLA03624|SLM03355|SOUTH|QUARTERLY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|99
+SrvMgmt|KPI6.3|SLA03624|SLM03355|SOUTH|YEARLY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|99
+SrvMgmt|KPI6.3|SLA03624|SLM03315|CENTRAL|DAILY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|100
+SrvMgmt|KPI6.3|SLA03624|SLM03315|CENTRAL|MONTHLY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|100
+SrvMgmt|KPI6.3|SLA03624|SLM03315|CENTRAL|QUARTERLY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|100
+SrvMgmt|KPI6.3|SLA03624|SLM03315|CENTRAL|YEARLY|2017-08-31|Percentage Access Node availability|99.70|98.00|98|100
+SrvMgmt|SM13.1|SLA03626|SLM03362|SOUTH|DAILY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|1400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03362|SOUTH|MONTHLY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|1400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03362|SOUTH|QUARTERLY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|1400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03362|SOUTH|YEARLY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|1400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03363|CENTRAL|DAILY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|14400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03363|CENTRAL|MONTHLY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|14400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03363|CENTRAL|QUARTERLY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|14400|28800
+SrvMgmt|SM13.1|SLA03626|SLM03363|CENTRAL|YEARLY|2017-08-25|Recovery Time Objective (RTO) DCC Services|90.00|80.00|14400|28800
+SrvMgmt|SM1.1|SLA03627|SLM03301|CENTRAL|DAILY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03301|CENTRAL|MONTHLY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03301|CENTRAL|QUARTERLY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03301|CENTRAL|YEARLY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03337|SOUTH|DAILY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03337|SOUTH|MONTHLY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03337|SOUTH|QUARTERLY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SrvMgmt|SM1.1|SLA03627|SLM03337|SOUTH|YEARLY|2017-09-27|First time SMWAN connectivity at install on Day 0|90.00|80.00|80|90
+SupplyChain|SMC1.1|SLA03617|SLM03326|CENTRAL|DAILY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03326|CENTRAL|YEARLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SrvMgmt|KPI10|SLA03704|SLM03349|SOUTH|MONTHLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03321|CENTRAL|MONTHLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03349|SOUTH|QUARTERLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03321|CENTRAL|QUARTERLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03349|SOUTH|YEARLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03321|CENTRAL|YEARLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03349|SOUTH|WEEKLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|KPI10|SLA03704|SLM03321|CENTRAL|WEEKLY|2017-08-31|Percentage of Notification of Planned Maintenance events within SLA|100.00|90.00|90|100
+SrvMgmt|SM14|SLA03616|SLM03344|SOUTH|DAILY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03325|CENTRAL|DAILY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03344|SOUTH|MONTHLY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03325|CENTRAL|MONTHLY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03344|SOUTH|QUARTERLY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03325|CENTRAL|QUARTERLY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03344|SOUTH|YEARLY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SrvMgmt|SM14|SLA03616|SLM03325|CENTRAL|YEARLY|2017-08-31|Percentage Service availability - User Integration Test Environment|95.00|90.00|90|95
+SupplyChain|SMC1.1|SLA03617|SLM03326|CENTRAL|WEEKLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03326|CENTRAL|MONTHLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03326|CENTRAL|QUARTERLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03329|CENTRAL|WEEKLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03329|CENTRAL|MONTHLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03329|CENTRAL|QUARTERLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03329|CENTRAL|YEARLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SrvMgmt|SM3.2|SLA03705|SLM03361|SOUTH|DAILY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03307|CENTRAL|DAILY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03361|SOUTH|MONTHLY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03307|CENTRAL|MONTHLY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03361|SOUTH|QUARTERLY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03307|CENTRAL|QUARTERLY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03361|SOUTH|YEARLY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SrvMgmt|SM3.2|SLA03705|SLM03307|CENTRAL|YEARLY|2017-09-19|Percentage of Category 3 Alerts delivered received by DCC Wan in 55 Seconds|99.00|96.00|96|99
+SupplyChain|SMC1.3|SLA03706|SLM03343|SOUTH|QUARTERLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|95|100
+SupplyChain|SMC1.3|SLA03706|SLM03328|CENTRAL|QUARTERLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|99|100
+SupplyChain|SMC1.3|SLA03706|SLM03343|SOUTH|MONTHLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|95|100
+SupplyChain|SMC1.3|SLA03706|SLM03328|CENTRAL|MONTHLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|99|100
+SupplyChain|SMC1.3|SLA03706|SLM03343|SOUTH|YEARLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|95|100
+SupplyChain|SMC1.3|SLA03706|SLM03328|CENTRAL|YEARLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|99|100
+SupplyChain|SMC1.3|SLA03706|SLM03343|SOUTH|WEEKLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|95|100
+SupplyChain|SMC1.3|SLA03706|SLM03328|CENTRAL|WEEKLY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|99|100
+SupplyChain|SMC1.2|SLA03707|SLM03342|SOUTH|MONTHLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|95|100
+SupplyChain|SMC1.2|SLA03707|SLM03327|CENTRAL|MONTHLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|99|100
+SupplyChain|SMC1.2|SLA03707|SLM03342|SOUTH|QUARTERLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|95|100
+SupplyChain|SMC1.2|SLA03707|SLM03327|CENTRAL|QUARTERLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|99|100
+SupplyChain|SMC1.2|SLA03707|SLM03342|SOUTH|WEEKLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|95|100
+SupplyChain|SMC1.2|SLA03707|SLM03327|CENTRAL|WEEKLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|99|100
+SupplyChain|SMC1.2|SLA03707|SLM03342|SOUTH|YEARLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|95|100
+SupplyChain|SMC1.2|SLA03707|SLM03327|CENTRAL|YEARLY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|99|100
+SrvMgmt|KPI13.4|SLA03708|SLM03368|CENTRAL|DAILY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03369|SOUTH|DAILY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03368|CENTRAL|MONTHLY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03369|SOUTH|MONTHLY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03368|CENTRAL|QUARTERLY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03369|SOUTH|QUARTERLY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03368|CENTRAL|YEARLY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.4|SLA03708|SLM03369|SOUTH|YEARLY|2017-09-19|Recovery Point Objective (RPO) Service Management|91.00|90.00|3600|7200
+SrvMgmt|KPI13.3|SLA03709|SLM03366|SOUTH|DAILY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03367|CENTRAL|DAILY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03366|SOUTH|MONTHLY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03367|CENTRAL|MONTHLY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03366|SOUTH|QUARTERLY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03367|CENTRAL|QUARTERLY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03366|SOUTH|YEARLY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|KPI13.3|SLA03709|SLM03367|CENTRAL|YEARLY|2017-09-19|Recovery Time Objective (RTO) Service Management|91.00|90.00|14400|28800
+SrvMgmt|SM13.2|SLA03710|SLM03364|SOUTH|DAILY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03365|CENTRAL|DAILY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03364|SOUTH|MONTHLY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03365|CENTRAL|MONTHLY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03364|SOUTH|QUARTERLY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03365|CENTRAL|QUARTERLY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03364|SOUTH|YEARLY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|SM13.2|SLA03710|SLM03365|CENTRAL|YEARLY|2017-09-19|Recovery Point Objective (RPO) DCC Services|91.00|90.00|900|1800
+SrvMgmt|KPI12.2|SLA03711|SLM03346|SOUTH|DAILY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03324|CENTRAL|DAILY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03346|SOUTH|MONTHLY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03324|CENTRAL|MONTHLY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03346|SOUTH|QUARTERLY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03324|CENTRAL|QUARTERLY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03346|SOUTH|YEARLY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI12.2|SLA03711|SLM03324|CENTRAL|YEARLY|2017-09-19|% of Power Outage Event alerts delivered > than 50 Communications hubs|98.00|96.00|96|98
+SrvMgmt|KPI9|SLA03712|SLM03348|SOUTH|DAILY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03320|CENTRAL|DAILY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03348|SOUTH|MONTHLY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03320|CENTRAL|MONTHLY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03348|SOUTH|QUARTERLY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03320|CENTRAL|QUARTERLY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03348|SOUTH|YEARLY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|KPI9|SLA03712|SLM03320|CENTRAL|YEARLY|2017-09-19|Delivery of Change Requests Impact Assessments within required target|100.00|95.00|95|100
+SrvMgmt|SM7.3|SLA03713|SLM03333|CENTRAL|DAILY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03352|SOUTH|DAILY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03333|CENTRAL|MONTHLY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03352|SOUTH|MONTHLY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03333|CENTRAL|QUARTERLY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03352|SOUTH|QUARTERLY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03333|CENTRAL|YEARLY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|SM7.3|SLA03713|SLM03352|SOUTH|YEARLY|2019-01-31|Number of Severity 1 and Severity 2 Incidents Resolution within SLA|99.00|85.00|1|2
+SrvMgmt|KPI7.2|SLA03714|SLM03353|SOUTH|DAILY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03317|CENTRAL|DAILY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03353|SOUTH|MONTHLY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03317|CENTRAL|MONTHLY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03353|SOUTH|QUARTERLY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03317|CENTRAL|QUARTERLY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03353|SOUTH|YEARLY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|KPI7.2|SLA03714|SLM03317|CENTRAL|YEARLY|2017-09-19|Percentage of Incident Notifications provided to DCC Service Desk|99.00|85.00|85|99
+SrvMgmt|SM6.2|SLA03715|SLM03356|SOUTH|DAILY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|99
+SrvMgmt|SM6.2|SLA03715|SLM03314|CENTRAL|DAILY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|100
+SrvMgmt|SM6.2|SLA03715|SLM03356|SOUTH|MONTHLY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|99
+SrvMgmt|SM6.2|SLA03715|SLM03314|CENTRAL|MONTHLY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|100
+SrvMgmt|SM6.2|SLA03715|SLM03356|SOUTH|QUARTERLY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|99
+SrvMgmt|SM6.2|SLA03715|SLM03314|CENTRAL|QUARTERLY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|100
+SrvMgmt|SM6.2|SLA03715|SLM03356|SOUTH|YEARLY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|99
+SrvMgmt|SM6.2|SLA03715|SLM03314|CENTRAL|YEARLY|2017-09-19|Percentage availability of DCC WAN Gateway Interface|99.98|98.25|98|100
+SrvMgmt|SM4.2|SLA03716|SLM03358|SOUTH|DAILY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03309|CENTRAL|DAILY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03358|SOUTH|MONTHLY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03309|CENTRAL|MONTHLY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03358|SOUTH|QUARTERLY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03309|CENTRAL|QUARTERLY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03358|SOUTH|YEARLY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SrvMgmt|SM4.2|SLA03716|SLM03309|CENTRAL|YEARLY|2017-09-19|Percentage of RTT 3 Test HAN Interface Commands delivered within 2 Hours|99.00|96.00|7200|9000
+SupplyChain|SMC2.1|SLA03618|SLM03340|SOUTH|WEEKLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03340|SOUTH|MONTHLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03340|SOUTH|QUARTERLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03340|SOUTH|YEARLY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SrvMgmt|KPI8|SLA03718|SLM03347|SOUTH|DAILY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03319|CENTRAL|DAILY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03347|SOUTH|MONTHLY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03319|CENTRAL|MONTHLY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03347|SOUTH|QUARTERLY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03319|CENTRAL|QUARTERLY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03347|SOUTH|YEARLY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SrvMgmt|KPI8|SLA03718|SLM03319|CENTRAL|YEARLY|2017-09-19|Delivery of plans and reports within required timescales|100.00|90.00|90|100
+SupplyChain|SMC1.3|SLA03706|SLM03343|SOUTH|DAILY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|95|100
+SupplyChain|SMC1.3|SLA03706|SLM03328|CENTRAL|DAILY|2019-09-19|% of Communications Hubs not faulty following attempted installation|99.90|99.50|99|100
+SupplyChain|SMC2.1|SLA03618|SLM03340|SOUTH|DAILY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC2.1|SLA03618|SLM03329|CENTRAL|DAILY|2019-08-31|Percentage of Communications Hub Incidents resolved by remote maintenance|99.00|95.00|95|99
+SupplyChain|SMC1.2|SLA03707|SLM03342|SOUTH|DAILY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|95|100
+SupplyChain|SMC1.2|SLA03707|SLM03327|CENTRAL|DAILY|2019-09-19|Percentage of Communications Hubs accepted by DCC Service Users|99.90|99.00|99|100
+SupplyChain|SMC1.1|SLA03617|SLM03601|SOUTH|YEARLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03601|SOUTH|WEEKLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03601|SOUTH|MONTHLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03601|SOUTH|QUARTERLY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SupplyChain|SMC1.1|SLA03617|SLM03601|SOUTH|DAILY|2019-08-31|Percentage of Communications Hubs delivered on time|99.00|95.00|95|99
+SrvMgmt|SM2.1|SLA09021|SLM09021|SOUTH|DAILY|2022-01-21|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09021|SOUTH|QUARTERLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09021|SOUTH|YEARLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09121|CENTRAL|DAILY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09121|CENTRAL|QUARTERLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09121|CENTRAL|YEARLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09021|SOUTH|MONTHLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.1|SLA09021|SLM09121|CENTRAL|MONTHLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (ESME/GSME/HCALCS)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09022|SOUTH|DAILY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09022|SOUTH|QUARTERLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09022|SOUTH|YEARLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09122|CENTRAL|DAILY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09122|CENTRAL|QUARTERLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09022|SOUTH|MONTHLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09122|CENTRAL|MONTHLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+SrvMgmt|SM2.2|SLA09022|SLM09122|CENTRAL|YEARLY|2022-04-05|Percentage of Category 1 Firmware Payloads delivered within 4 Days (PPMID)|99.00|96.00|96|99
+274

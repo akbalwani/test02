@@ -1,0 +1,10 @@
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\bean\FileFormatValidationBean.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\FileFormatValidationProducer.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\validators\impl\CSVValidator.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\bean\SeparatorValidator.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\Constants.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\validators\FileValidator.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\CustomErrorHandler.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\validators\impl\DATValidator.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\bean\IsSeparatorValid.class
+com\axway\securetransport\plugins\step\fileformatvalidation\spi11\validators\impl\XMLValidator.class

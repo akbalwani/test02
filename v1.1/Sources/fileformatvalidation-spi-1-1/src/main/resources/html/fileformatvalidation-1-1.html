@@ -1,0 +1,653 @@
+<script type="text/javascript">
+    components.register(new CustomComponent());
+
+    function CustomComponent() {
+        components.register(new FileFilterActionsTemplate("#fileFilterActionsContainer"));
+        components.register(new StepFailureActionsTemplate("#stepFailureActionsContainer"));
+
+	    $('#headerCount').prop('disabled',true);
+        $('#footerCount').prop('disabled',true);
+    	
+        $('#skipHeader').change(function() {
+        	  if(this.checked) {
+        	    $('#headerCount').prop('disabled',false);
+        	  } else {
+        	    $('#headerCount').prop('disabled',true);
+        	  }
+        	});
+
+        $('#skipFooter').change(function() {
+      	  if(this.checked) {
+      	    $('#footerCount').prop('disabled',false);
+      	  } else {
+      	    $('#footerCount').prop('disabled',true);
+      	  }
+      	});
+        
+        function fill(currentRouteStep) {
+            $('#quarantineFolder').val(currentRouteStep.quarantineFolder);
+            $('#separator').val(currentRouteStep.separator);
+            $('#elementNumber').val(currentRouteStep.elementNumber);
+            //Arpit
+            
+           
+
+
+
+            if (!isNullEmptyOrUndefined(currentRouteStep.skipHeader) &&
+                    currentRouteStep.skipHeader === "true") {
+                $('#skipHeader').prop('checked', true);
+				$('#headerCount').val(currentRouteStep.headerCount);
+                $('#headerCount').attr('disabled', false);
+            } else {
+                $('#skipHeader').prop('checked', false);
+				$('#headerCount').val('');
+                $('#headerCount').attr('disabled', true);
+            }
+
+            if (!isNullEmptyOrUndefined(currentRouteStep.skipFooter) &&
+                    currentRouteStep.skipFooter === "true") {
+                $('#skipFooter').prop('checked', true);
+				$('#footerCount').val(currentRouteStep.footerCount);
+                $('#footerCount').attr('disabled', false);
+            } else {
+                $('#skipFooter').prop('checked', false);
+				$('#footerCount').val('');
+                $('#footerCount').attr('disabled', true);
+            }
+
+            $('#fixedLength').val(currentRouteStep.fixedLength);
+            $('#recordHeader').val(currentRouteStep.recordHeader);
+            $('#forbiddenChars').val(currentRouteStep.forbiddenChars);
+            $("input[name=fileType][value=" + currentRouteStep.fileType + "]").attr('checked', 'checked');
+
+            if(document.getElementById('csv').checked) {
+                toggle("csvSettings");
+            }
+            if(document.getElementById('dat').checked) {
+                toggle("datSettings");
+            }
+        }
+
+        function collect(collectionBean) {
+            var fileType = $('input[name=fileType]:radio:checked').val();
+            collectionBean.fileType = fileType;
+
+            clearByType(fileType);
+
+            var quarantineFolder = $.trim($('#quarantineFolder').val());
+            collectionBean.quarantineFolder = quarantineFolder;
+            
+            var separator = $.trim($('#separator').val());
+            collectionBean.separator = separator;
+            var elementNumber = $.trim($('#elementNumber').val());
+            collectionBean.elementNumber = elementNumber;
+            //Arpit
+            
+            var skipHeader = document.getElementById('skipHeader').checked;
+            collectionBean.skipHeader=skipHeader.toString();
+            if (skipHeader ) {
+
+            var headerCount = $.trim($('#headerCount').val());
+            
+            }else{
+            	var headerCount = '';
+            }
+            collectionBean.headerCount = headerCount;
+            
+            var skipFooter = document.getElementById('skipFooter').checked;
+            collectionBean.skipFooter=skipFooter.toString();
+            if (skipFooter ) {
+            var footerCount = $.trim($('#footerCount').val());
+            
+            }else{
+            	var footerCount = '';
+            }
+            collectionBean.footerCount = footerCount;
+            
+            var fixedLength = $.trim($('#fixedLength').val());
+            collectionBean.fixedLength = fixedLength;
+            var recordHeader = $.trim($('#recordHeader').val());
+            collectionBean.recordHeader = recordHeader;
+            var forbiddenChars = $.trim($('#forbiddenChars').val());
+
+            if (forbiddenChars === ""){
+                collectionBean.forbiddenChars = ","
+            }else{
+                collectionBean.forbiddenChars = forbiddenChars;
+            }
+        }
+
+        function validate(errorCollection) {
+            var separator = $.trim($('#separator').val());
+            var skipHeader = document.getElementById('skipHeader').checked;
+            var headerCount = $.trim($('#headerCount').val());
+            var skipFooter = document.getElementById('skipFooter').checked;
+            var footerCount = $.trim($('#footerCount').val());
+            var headerCount= $.trim($('#headerCount').val());
+            var footerCount= $.trim($('#footerCount').val());
+            var fileType = $('input[name=fileType]:radio:checked').val();
+            var quarantineFolder = $.trim($('#quarantineFolder').val());
+             
+
+            if (fileType === "csv" && separator.length === 0) {
+                errorCollection.push("Separator field cannot be empty.");
+            }
+        	if (fileType === "csv" && skipHeader) {
+        		if(headerCount.length === 0){
+                errorCollection.push("Header Count field cannot be empty.");
+        		}
+            }
+        	if (fileType === "csv" && skipFooter) {
+        		if(footerCount.length === 0){
+                errorCollection.push("Footer Count field cannot be empty.");
+        		}
+            }
+            if (quarantineFolder.length === 0) {
+                errorCollection.push("Quarantine field cannot be empty.");
+            }
+            
+            console.log(headerCount);
+            console.log(footerCount);
+        }
+
+        var instance = new ComponentInterface();
+        
+        instance.fill = fill;
+        instance.collect = collect;
+        instance.validate = validate;
+
+        return Object.seal(instance);
+    }
+
+    function toggle(type) {
+        document.getElementsByName('csvSettings').forEach(element => element.style.display = "none");
+        document.getElementsByName('datSettings').forEach(element => element.style.display = "none");
+
+        if (type !== '') {
+            document.getElementsByName(type).forEach(element => element.style.display = "block");
+        }
+    }
+
+    function clearByType(fileType) {
+
+        if (fileType === "xml") {
+            clearCSVTextBoxes();
+            clearDATTextBoxes();
+        } else if (fileType === "csv") {
+            clearDATTextBoxes();
+        } else {
+            clearCSVTextBoxes();
+        }
+    }
+
+    function clearCSVTextBoxes() {
+        document.getElementById("separator").value = "";
+        document.getElementById("elementNumber").value = "";
+        document.getElementById('skipHeader').checked=false;
+        document.getElementById('skipFooter').checked=false;
+        document.getElementById("headerCount").value = "";
+        document.getElementById("footerCount").value = "";
+    }
+
+    function clearDATTextBoxes() {
+        document.getElementById("fixedLength").value = "";
+        document.getElementById("recordHeader").value = "";
+        document.getElementById("forbiddenChars").value = ",";
+    }
+    
+    function isNullEmptyOrUndefined(value) {
+        return !value && ($.trim(value) === "");
+    }
+
+</script>
+<div id="step-errors" class="errors"></div>
+
+<form style="width: 800px;" method="post">
+    <div class="wrapper-section wide-heading">
+        <div id="fileFilterActionsContainer"></div>
+        <div style="height: 20px;"></div>
+
+        <div id="stepFailureActionsContainer"></div>
+        <div class="clear" style="height: 20px;"></div>
+
+        <fieldset>
+            <legend>File format validation</legend>
+            <table>
+                <tr>
+                    <td class="labelColumn">
+                        <label>File type<em class="asterisk">*</em>:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="radio" name="fileType" value="xml" checked="checked" id="xml" onchange="toggle('');">
+                    </td>
+                    <td class="labelColumn">
+                        <label for="xml">XML</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn"></td>
+                    <td class="checkColumn">
+                        <input type="radio" name="fileType" value="csv" id="csv" onchange="toggle('csvSettings');"/>
+                    </td>
+                    <td class="labelColumn">
+                        <label for="csv">CSV</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn"></td>
+                    <td class="checkColumn">
+                        <input type="radio" name="fileType" value="dat" id="dat" onchange="toggle('datSettings');"/>
+                    </td>
+                    <td class="labelColumn">
+                        <label for="dat">DAT</label>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="quarantineFolder">Quarantine Folder<em class="asterisk">*</em>:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="quarantineFolder" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="quarantine-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="quarantine-attr-help" class="hidden">
+                            <p>
+                                The quarantine folder for invalid files.
+                            </p>
+                            <p>
+                                The property value will be set as a file flow attribute: ${flow.attributes['quarantineFolder']}.
+                            </p>
+                             <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to the account name of the route.
+                                    <p class="example">${plugin.account.name}</p>
+                                    <a class="use-example" href="#p" data-for="quarantineFolder">Use this example</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li> Evaluates to the current transfer file name.
+                                    <p class="example">${plugin.transfer.target}</p>
+                                    <a class="use-example" href="#p" data-for="quarantineFolder">Use this example</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="quarantineFolder">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset name="csvSettings" style="display: none">
+            <legend>CSV settings</legend>
+            <table>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="separator">Separator<em class="asterisk">*</em>:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="separator" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="Separator-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="Separator-attr-help" class="hidden">
+                            <p>
+                                Separator for element separation in .csv files.
+                            </p>
+                            <p>
+                                <b>Note:</b> After expression evaluation the separator field only gets the first character from the evaluated value.
+                            </p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to the current transfer file name.
+                                    <p class="example">${plugin.transfer.target}</p>
+                                    <a class="use-example" href="#p" data-for="separator">Use this example</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="separator">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="elementNumber">Element number:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="elementNumber" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="Element-Number-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="Element-Number-attr-help" class="hidden">
+                            <p>
+                                Number of expected elements in the .csv file.
+                                Each record of the file must contain the specified number of elements.
+                            </p>
+                            <p>
+                                If there is no provided value, each record of the file must have the same number of elements as the number of elements of the first record of the file.
+                            </p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="elementNumber">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="skipHeader">Skip Header Lines:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="checkbox" id="skipHeader" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="skipHeader-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="skipHeader-attr-help" class="hidden">
+                            <p>
+								When the checkbox is enabled, a text box to enter a value greater than zero will be enabled and valid number greater than zero must be entered in that checkbox.
+                            </p>
+                            <p>
+                                If the Skip Header Lines checkbox is disabled, then no header lines will be skipped and all the header lines will be validated.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+				<tr>	
+                    <td class="labelColumn">
+                        <label for="headerCount">No. of Header Lines to be Skipped:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="headerCount" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="headerCount-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="headerCount-attr-help" class="hidden">
+                            <p>
+                                Header count for skipping the first x lines from .csv files for validation.
+                            </p>
+							<p>
+                                Must enter a valid number greater than zero.
+                            </p>
+							<p>							
+								For example, if the value is entered as 3, then the first 3 lines of the csv file will be skipped from validation.
+							</p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="headerCount">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="skipFooter">Skip Footer Lines:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="checkbox" id="skipFooter" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="skipFooter-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="skipFooter-attr-help" class="hidden">
+                            <p>
+								When the checkbox is enabled, a text box to enter a value greater than zero will be enabled and valid number greater than zero must be entered in that checkbox.
+                            </p>
+                            <p>
+                                If the Skip Footer Lines checkbox is disabled, then no footer lines will be skipped and all the footer lines will be validated.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+
+				
+								<tr>	
+                    <td class="labelColumn">
+                        <label for="footerCount">No. of Footer Lines to be Skipped:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="footerCount" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="footerCount-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="footerCount-attr-help" class="hidden">
+                            <p>
+                                Footer count for skipping the last x lines from .csv files for validation.
+                            </p>
+							<p>
+                                Must enter a valid number greater than zero.
+                            </p>
+							<p>							
+								For example, if the value is entered as 3, then the last 3 lines of the csv file will be skipped from validation.
+							</p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="footerCount">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                            </table>
+        </fieldset>
+        <fieldset name="datSettings" style="display: none">
+            <legend>DAT settings</legend>
+            <table>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="fixedLength">Fixed length:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="fixedLength" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="Fixed-Length-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="Fixed-Length-attr-help" class="hidden">
+                            <p>
+                                Fixed length of the file record.
+                                Each record of the .dat file must contain the specified number of symbols.
+                            </p>
+                            <p>
+                                If there is no provided value, validation against this field will not be performed.
+                            </p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="fixedLength">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="recordHeader">Record Header:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="recordHeader" class="template-input" style="width: 285px" value=""/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="Record-Header-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="Record-Header-attr-help" class="hidden">
+                            <p>
+                                The specified value will be checked as a record head for each record.
+                            </p>
+                            <p>
+                                If there is no provided value, validation against this field will not be performed.
+                            </p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to the account name of the route.
+                                    <p class="example">${plugin.account.name}</p>
+                                    <a class="use-example" href="#p" data-for="recordHeader">Use this example</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li> Evaluates to the current transfer file name.
+                                    <p class="example">${plugin.transfer.target}</p>
+                                    <a class="use-example" href="#p" data-for="recordHeader">Use this example</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="recordHeader">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelColumn">
+                        <label for="forbiddenChars">Forbidden characters:</label>
+                    </td>
+                    <td class="checkColumn">
+                        <input type="text" id="forbiddenChars" class="template-input" style="width: 285px" value=","/>
+                    </td>
+                    <td class="inputColumn">
+                        <div class="contextual-help">
+                            <a data-content-id="Forbidden-Chars-attr-help" title="Open contextual help"
+                               class="modern-iconhelp" tabIndex="-1" href="#">?</a>
+                            <div class="help-dialog hidden">
+                                <div class="dialog-header">
+                                    <a class="btn-close" href="#">x</a>
+                                </div>
+                                <div class="dialog-content"></div>
+                            </div>
+                        </div>
+                        <div id="Forbidden-Chars-attr-help" class="hidden">
+                            <p>
+                                Forbidden characters in the file.
+                                The specified symbols must not be present in the file.
+                            </p>
+                            <p>
+                                <b>Note:</b> By default, the comma char ‘,’ is considered forbidden.
+                            </p>
+                            <p> Sample expressions: </p>
+                            <ul>
+                                <li> Evaluates to an additional attribute in the account named var1.
+                                    <p class="example"> ${plugin.account.attributes['userVars.var1']}</p>
+                                    <a class="use-example" href="#p" data-for="forbiddenChars">Use this example</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <div class="clear" style="height: 20px;"></div>
+
+        <!-- Route legend begin. -->
+        <div class="page-legend message clear">
+            <p>
+                <em class="asterisk">*</em><span>Indicates required field</span>
+            </p>
+            <p class="template-input">&nbsp;&nbsp;Enter value or expression</p>
+        </div>
+        <!-- Route legend end. -->
+    </div>
+
+</form>

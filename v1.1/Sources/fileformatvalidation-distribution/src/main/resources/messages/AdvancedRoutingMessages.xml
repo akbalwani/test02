@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<messages>
+
+    <message>
+        <id>SCCS0001</id>
+        <code>ARCS0001</code>
+        <text>An error occurred while transforming an attribute. Step configuration suggests to stop further route execution.</text>
+        <description>An error occurred while transforming an attribute. Step configuration suggests to stop further route execution.</description>
+    </message>
+        
+    <message>
+        <id>SCCS0002</id>
+        <code>ARCS0002</code>
+        <text>An error occurred while transforming an attribute. Step configuration suggests to continue route execution.</text>
+        <description>An error occurred while transforming an attribute. Step configuration suggests to continue route execution.</description>
+    </message>
+
+</messages>

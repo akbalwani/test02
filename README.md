@@ -1,92 +1,122 @@
-# O2 Telefonica Fileformat Validation
+File format validation Step for SecureTransport
+==========================================================
+version **1.1.0**
 
+Contents
+--------
 
+-   Overview
+-   Prerequisites
+-   Installation
+-   Configuration
+-   REST Configuration
+-   Expression language
+-   Troubleshooting
+-   Known issues and Limitations
+-   ChangeLog
+-   Support
 
-## Getting started
+Overview
+--------
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+The File Format Validation Custom Advanced Routing (AR) step will perform file format validation against a specified file type.
+The selected file type and result of the validation (*Accepted | Refused*) will be exposed as flow attributes to the file.
+If after validation the file is considered invalid, a *.refused* extension will be appended to the file name and the error message, 
+along with the specified quarantine folder, will be exposed as flow attributes to the file.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+The File Format Validation Custom Advanced Routing (AR) step is deployed as a Custom AR step to an existing ST installation. 
+Once deployed, it provides a new Transformation step - **File Format Validation** to the list of available steps in the *Routes* page for User Accounts.
+Introduction to general AR step configuration is available in the SecureTransport's Administration Guide under section 'Advanced Routing'.
 
-## Add your files
+Prerequisites
+--------
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Please make sure the following requirements are met before installation:
 
-```
-cd existing_repo
-git remote add origin https://git-ext.ecd.axway.com/cso-reusable/MFT/st/O2-Telefonica-Fileformat-Validation.git
-git branch -M main
-git push -uf origin main
-```
+-  SecureTransport 5.5-20220227 or higher.
 
-## Integrate with your tools
+Installation
+------------
+To install the File Format Validation AR step, perform the following steps on all SecureTransport Server nodes:
 
-- [ ] [Set up project integrations](https://git-ext.ecd.axway.com/cso-reusable/MFT/st/O2-Telefonica-Fileformat-Validation/-/settings/integrations)
+1.	Delete the following files/folders associated with the previous version of this step (if they exist):
+    Existing Custom step configurations in ST will be preserved.
+        ````
+        <FILEDRIVEHOME>/plugins/routingSteps/axway-step-fileformatvalidation.jar
+        <FILEDRIVEHOME>/plugins/routingSteps/axway-step-fileformatvalidation
+        ````
 
-## Collaborate with your team
+2.   Extract/unzip **securetransport-plugins-step-fileformatvalidation-1.1.*.zip** into `<FILEDRIVEHOME>/plugins/routingSteps`
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+3.   Restart all SecureTransport services 
 
-## Test and Deploy
+Configuration
+------------
 
-Use the built-in continuous integration in GitLab.
+-   In ST Admin UI, navigate to the Routes page of a User Account.
+-   Click *New Route* and choose **File Format Validation** from *Select Step* list. 
+-   Configure the step settings:
+    - File type - **required field** - the file type for which validation will be performed: xml | csv | dat.
+    - Quarantine Folder - **required field** - The folder where the invalid files should be moved. The property value will be set as a file flow attribute.
+	- Additional file type specific settings:
+		- settings for **.xml** file type: no additional settings.
+		- settings for **.csv** file type:
+			- Separator - **required field** for .csv file type – The separator for the file elements.
+			- Element Number - Number of expected elements. Each record of the file must contain the specified number of elements.	
+			If there is no provided value, each record of the file will be validated to contain number of elements equal to the number of elements of the first record of the file.			
+	(v1.1)	- Skip Header Lines - Checkbox to enable/disable the option to skip header lines. When checked the option to specify "No. of Header Lines to be Skipped" will be enabled.
+	(v1.1)	- No. of Header Lines to be Skipped - Based on the value, first n lines will be skipped for validation. Specify a value as a whole number or an expression that resolves to a whole number.
+	(v1.1)	- Skip Footer Lines - Checkbox to enable/disable the option to skip footer lines. When checked the option to specify "No. of Footer Lines to be Skipped" will be enabled.
+	(v1.1)	- No. of Footer Lines to be Skipped - Based on the value, last n lines will be skipped. Specify a value as a whole number or an expression that resolves to a whole number.
+			If the skip options are not enabled then the header/footer lines won't be skipped for validation. 
+		- settings for **.dat** file type:
+			- Fixed Length - The length of the file records. Each record of the .dat file must contain the specified number of symbols.
+			If there is no provided value, validation against this field will not be performed.
+			- Record Header - The specified value will be checked as a record header each record of the file. 
+			If there is no provided value, validation against this field will not be performed.
+			- Forbidden Characters - Forbidden characters in the .dat file. By default, the comma char ‘,’ is considered forbidden.
+			If no value is provided, the file will be scanned for comma ‘,’, otherwise – it will be scanned for ‘,’ along with the other specified symbols.
+-   Save the Route.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+REST Configuration
+------------
 
-***
+File Format Validation step can be configured using the **/routes** ST Admin REST API endpoint.
+The REST API definition of the File Format Validation step is available in Swagger YAML format under `<FILEDRIVEHOME>/plugins/routingSteps/axway-step-fileformatvalidation`
 
-# Editing this README
+Expression language
+------------
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+The step text fields support all expressions available in out-of-the-box AR steps, prefixed with "plugin".
+Sample expressions:
+* ${plugin.account.name} - Evaluates to the account name of the route.
+* ${plugin.account.attributes['userVars.var1']} - Evaluates to an additional attribute in the account named var1.
+* ${plugin.transfer.target} - Evaluates to the current transfer file name.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Troubleshooting
+------------
 
-## Name
-Choose a self-explaining name for your project.
+To enable extended Debug logging, edit `<FILEDRIVEHOME>/conf/tm-log4j.xml` config file.
+Find the **com.axway.st.plugins.routing** logger element and set its **level** value to DEBUG.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Known issues and Limitations
+----------------------------
+-   None
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+ChangeLog
+----------------------------
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### 1.0.0 (15.03.2022)
+Initial release for ST 5.5-20220227 or higher (Custom AR Step SPI 1.1)
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### 1.1.0 (30.09.2022)
+Updated to include options to skip header and footer lines for file type CSV
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Support
+----------------------
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+For further information or assistance with this product, contact Axway Global Support.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Online: Axway Sphere at support.axway.com
+Email: support@axway.com
+Phone: Go to Axway Sphere at support.axway.com. Click the Contact Axway Support link to display our list of regional support contact phone numbers, and then locate the phone number appropriate for your location.
