@@ -1,0 +1,7 @@
+Custom-Step: fileformatvalidation
+SPI-Version:
+  '1.1':
+    Plugin-Label: File Format Validation
+    Custom-UI: html/fileformatvalidation-1-1.html
+    Class-Path: axway-step-fileformatvalidation/1.1/axway-step-fileformatvalidation-1.1.jar
+    Open-API: axway-step-fileformatvalidation/fileformatvalidation-spi-1.1.yaml

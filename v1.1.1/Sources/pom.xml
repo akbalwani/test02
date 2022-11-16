@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.axway.securetransport.plugins</groupId>
+    <artifactId>securetransport-plugins-step-fileformatvalidation-parent</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>fileformatvalidation-spi-1-1</module>
+        <module>fileformatvalidation-distribution</module>
+    </modules>
+
+    <properties>
+        <st.plugin.type>step</st.plugin.type>
+
+        <st.spi.version>1.1</st.spi.version>
+        <st.spi.artifact.version>5.4.0-4</st.spi.artifact.version>
+
+        <!--naming -->
+        <plugin.step.name>fileformatvalidation</plugin.step.name> <!--primary identifier of the plugin-->
+        <plugin.step.label>File Format Validation</plugin.step.label> <!--UI display name-->
+        <plugin.name>${plugin.step.label} Custom Step</plugin.name> 
+
+        <!--assembly-->
+        <plugin.homefolder>axway-${st.plugin.type}-${plugin.step.name.nospaces.lowercase}</plugin.homefolder>
+        <plugin.filename>axway-${st.plugin.type}-${plugin.step.name.nospaces.lowercase}</plugin.filename>
+        <plugin.relative.path>plugins/step</plugin.relative.path>
+        <plugin.dependency.folder>lib</plugin.dependency.folder>
+        <plugin.dependency.full.path>${project.build.directory}/${plugin.relative.path}/${plugin.dependency.folder}</plugin.dependency.full.path>
+        <target.home.versioned.path>${plugin.homefolder}/${st.spi.version}</target.home.versioned.path>
+        <resources.source.path>${basedir}/src/main/resources</resources.source.path>
+
+        <producer.class>com.axway.securetransport.plugins.step.fileformatvalidation.spi11.FileFormatValidationProducer</producer.class>
+        <plugin.bean.class>com.axway.securetransport.plugins.step.fileformatvalidation.spi11.bean.FileFormatValidationBean</plugin.bean.class>
+
+        <!--ST dependencies -->
+        <javax.inject.version>1</javax.inject.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
+
+        <!--third party dependencies -->
+        <opencsv.version>5.7.0</opencsv.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <commons-logging.version>1.2</commons-logging.version>
+		<commons-text.version>1.9</commons-text.version>
+		<commons-collections4.version>4.4</commons-collections4.version>
+		
+        <java.version>11</java.version>
+        <project.source.version>11</project.source.version>
+
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                   <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>regex-property-plugin-spi-version</id>
+                        <goals>
+                            <goal>regex-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>st.spi.versionnodots</name>
+                            <value>${st.spi.version}</value>
+                            <regex>\.</regex>
+                            <replacement>-</replacement>
+                            <failIfNoMatch>false</failIfNoMatch>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>regex-property-plugin-name</id>
+                        <goals>
+                            <goal>regex-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>plugin.step.name.nospaces</name>
+                            <value>${plugin.step.name}</value>
+                            <regex>\.|\ |\-</regex>
+                            <replacement/>
+                            <failIfNoMatch>false</failIfNoMatch>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>regex-property-plugin-name-lowercase</id>
+                        <goals>
+                            <goal>regex-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>plugin.step.name.nospaces.lowercase</name>
+                            <value>${plugin.step.name.nospaces}</value>
+                            <regex>${plugin.step.name.nospaces}</regex>
+                            <replacement>${plugin.step.name.nospaces}</replacement>
+                            <toLowerCase>true</toLowerCase>
+                            <failIfNoMatch>false</failIfNoMatch>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.axway.securetransport.plugins</groupId>
+        <artifactId>securetransport-plugins-step-fileformatvalidation-parent</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>securetransport-plugins-step-fileformatvalidation</artifactId>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <!--assembly -->
+        <target.dependency.full.path>${project.build.directory}/${plugin.relative.path}/${plugin.filename}/lib</target.dependency.full.path>
+
+        <assembly.bin.path>src/assembly/bin.xml</assembly.bin.path>
+        <assembly.jar.path>src/assembly/jar.xml</assembly.jar.path>
+        <target.jar.filename>${plugin.filename}</target.jar.filename>
+        <target.zip.filename>${project.artifactId}-${project.version}</target.zip.filename>
+    </properties>
+
+    <build>
+        <finalName>${target.jar.filename}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>jar-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>${assembly.jar.path}</descriptor>
+                            </descriptors>
+                            <finalName>${target.jar.filename}</finalName>
+                            <archive>
+                                <manifestEntries>
+                                    <Custom-Step>${plugin.step.name}</Custom-Step>
+                                    <Plugin-Label>${plugin.step.label}</Plugin-Label>
+                                    <SPI-Version>${st.spi.version}</SPI-Version>
+                                    <Custom-UI>html/${plugin.step.name.nospaces}-${st.spi.versionnodots}.html</Custom-UI>
+                                    <Producer-Class>${producer.class}</Producer-Class>
+                                    <Plugin-Bean-Class>${plugin.bean.class}</Plugin-Bean-Class>
+                                    <Class-Path>${plugin.homefolder}/${st.spi.version}/${plugin.filename}-${st.spi.version}.jar</Class-Path>
+                                </manifestEntries>
+                            </archive>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>zip-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>${assembly.bin.path}</descriptor>
+                            </descriptors>
+                            <finalName>${target.zip.filename}</finalName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${target.dependency.full.path}</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                            <excludeScope>provided</excludeScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

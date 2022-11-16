@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<routeStepMetadata>
+	<stepType>fileformatvalidation</stepType>
+	<stepCategory>Transformation</stepCategory>
+	<stepDisplayName>File Format Validation</stepDisplayName>
+	<endpointSchema>st.fileformatvalidation</endpointSchema>
+	<uiPagePath>fileformatvalidation-1-1.html</uiPagePath>
+	<stepPropertyBean>com.axway.securetransport.plugins.step.fileformatvalidation.spi11.bean.FileFormatValidationBean</stepPropertyBean>
+	<stepProducer>com.axway.securetransport.plugins.step.fileformatvalidation.spi11.FileFormatValidationProducer</stepProducer>
+</routeStepMetadata>
